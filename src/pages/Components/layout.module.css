@@ -1,0 +1,18 @@
+body {
+  background-color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 750px;
+  padding: 1rem;
+  flex-grow: 1;
+}
+
