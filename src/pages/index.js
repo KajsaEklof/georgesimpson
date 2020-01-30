@@ -8,11 +8,12 @@ import PrimaryButton from "./Components/PrimaryButton";
 
 
 library.add(fab, faCheckSquare, faCoffee)
+
 const IndexPage = () => {
     return (
       <Layout>
-      <h1>This is h1</h1>
-      <h2>This is h2</h2>
+      <h1>Home</h1>
+
       <PrimaryButton
       text={"Click me!"}
       link={"/contact/"}

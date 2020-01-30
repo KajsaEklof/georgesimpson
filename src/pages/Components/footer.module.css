@@ -26,7 +26,7 @@
   font-family: 'Bebas Neue', sans-serif;
   color: #000000;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.6em;
   line-height: 0.8em;
   padding-top: 1em;
 }
@@ -38,8 +38,8 @@
 
 .links:hover {
   color: #e54c14;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
+  transition: color 0.2s linear;
+
 }
 
 .icon {

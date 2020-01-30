@@ -4,13 +4,13 @@ import { Link } from 'gatsby';
 
 
 
-const WorkPage = () => {
+const BHTSPage = () => {
   return (
     <Layout>
-      <h1>Work</h1>
+      <h1>Behind the Scenes</h1>
       <Link to="/">Back to home</Link>
     </Layout>
   )
 }
 
-export default WorkPage;
+export default BHTSPage;
