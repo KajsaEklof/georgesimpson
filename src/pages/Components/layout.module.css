@@ -16,7 +16,3 @@ body {
   flex-grow: 1;
 }
 
-*:focus {
-  outline: black dotted 4px;
-  outline-offset: 4px;
-  }

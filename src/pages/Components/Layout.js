@@ -8,6 +8,7 @@ import Navigation from "./Navigation";
 import "typeface-source-sans-pro";
 import "typeface-bebas-neue";
 import "typeface-poppins";
+import 'focus-visible';
 
 const Layout = props => {
   return (

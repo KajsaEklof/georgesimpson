@@ -45,3 +45,14 @@ h2 {
     line-height: 1.1;
 }
 
+*:focus:not(.focus-visible) {
+    outline: none;
+  }
+
+.focus-visible {
+    outline: black dotted 4px;
+    outline-offset: 4px;
+  }
+
+ 
+  
