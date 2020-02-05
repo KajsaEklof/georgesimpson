@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
+import { Link as GatsbyLink} from "gatsby";
 import { device } from "./Device";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PrimaryButton = props => {
-  const Button = styled.button`
+  const LinkButton = styled(GatsbyLink)`
     font-family: "Source Sans Pro", sans-serif;
     font-size: 0.9em;
     font-weight: bold;
@@ -16,13 +16,14 @@ const PrimaryButton = props => {
     cursor: pointer;
     padding: 0.5em 1.2em;
     border: solid #e54c14 3px;
+    text-decoration: none;
     /*box-shadow: 3px 3px 6px 1px #828282b5; */
 
     &:hover {
       box-shadow: 2px 3px 6px grey;
     }
     &:active {
-      box-shadow: inset 1px 2px 4px grey;
+      box-shadow: none;
     }
 
     @media ${device.desktop} {
@@ -36,11 +37,9 @@ const PrimaryButton = props => {
   }
 
   return (
-    <Link to={props.link}>
-      <Button>
+    <LinkButton to={props.link} role="button">
         {props.text} <FontAwesomeIcon icon={faArrowRight} style={iconStyle} />
-      </Button>
-    </Link>
+    </LinkButton>
   )
 }
 

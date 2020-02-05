@@ -1,13 +1,24 @@
-import React from "react"
-import { Link } from "gatsby"
-import navigationStyles from "./navigation.module.css"
-import styled from "styled-components"
+import React from "react";
+import { Link } from "gatsby";
+import navigationStyles from "./navigation.module.css";
+import styled from "styled-components";
+import { device } from "./Device";
+
 
 const Navigation = props => {
   const Nav = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 1em 2em 0em 1em;
+    z-index: 99999;
+
+    @media ${device.desktop} {
+      display:none;
+    }
   `
   const StyledLink = styled(Link)`
     margin: 1em;
@@ -35,7 +46,7 @@ const Navigation = props => {
         width: 100%;
         left: 0;
         background: #e54c14;
-      }  
+      } 
   `
 
   return (

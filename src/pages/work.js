@@ -1,14 +1,15 @@
 import React from "react"
-import Layout from "./Components/Layout"
+import Layout from "../Components/Layout"
 import { Link } from 'gatsby';
+import Heading from "../Components/Heading";
 
 
 
 const WorkPage = () => {
   return (
     <Layout>
-      <h1>Work</h1>
-      <Link to="/">Back to home</Link>
+      <Heading title="Work"/>
+      <Link to="/" style={{clear: 'both'}}>Back to home</Link>
     </Layout>
   )
 }

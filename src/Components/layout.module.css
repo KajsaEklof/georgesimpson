@@ -11,8 +11,8 @@ body {
   min-height: 100vh;
 }
 
-.content {
-  padding: 1rem;
-  flex-grow: 1;
-}
 
+.content {
+  flex-grow: 1;
+  padding: 2em;
+}

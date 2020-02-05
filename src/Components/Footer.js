@@ -1,7 +1,7 @@
-import React from "react"
-import footerStyles from "./footer.module.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link } from "gatsby"
+import React from "react";
+import footerStyles from "./footer.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "gatsby";
 
 const Footer = () => {
   const year = new Date().getFullYear()
