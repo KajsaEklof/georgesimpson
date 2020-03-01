@@ -8,6 +8,7 @@ const Footer = () => {
 
   return (
     <footer className={footerStyles.footer}>
+    <div className={footerStyles.wrapper}>
       <div className={footerStyles.container}>
         <Link
           to="/contact/"
@@ -41,6 +42,7 @@ const Footer = () => {
         </div>
       </div>
       <p className={footerStyles.para}>© George Simpson {year}</p>
+      </div>
     </footer>
   )
 }

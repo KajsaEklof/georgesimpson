@@ -4,10 +4,16 @@
     margin-top: 2em;
     font-size: 1em;
     padding: 0.5em 0.2em 0.5em 0.2em;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.wrapper {
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
 }
 
 .para {
@@ -60,11 +66,13 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .footer {
+  .wrapper {
+    max-width: 80%;
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: baseline;
-   
+    display: flex;
+    margin: 0 auto;
 }
 .container {
   flex-direction: row;

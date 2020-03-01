@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { device } from "../ComponentStyles/Device";
+
 
 export const StyledBurger = styled.button`
   position: absolute;
   top: 5%;
-  left: 2rem;
+  right: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -13,18 +15,19 @@ export const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 9999999;
   
-  &:focus {
-    outline: none;
+  @media ${device.desktop} {
+    display: none;
   }
+
   
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => open ? 'white' : 'black' };
+    background: black;
     border-radius: 10px;
-    transition: all 0.3s linear;
+    transition: all 0.1s linear;
     position: relative;
     transform-origin: 1px;
   
@@ -41,4 +44,5 @@ export const StyledBurger = styled.button`
     transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
   }
 }
+
 `;

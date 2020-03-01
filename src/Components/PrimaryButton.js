@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link as GatsbyLink} from "gatsby";
-import { device } from "./Device";
+import { device } from "./ComponentStyles/Device";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -18,6 +18,7 @@ const PrimaryButton = props => {
     border: solid #e54c14 3px;
     text-decoration: none;
     /*box-shadow: 3px 3px 6px 1px #828282b5; */
+    width: fit-content; 
 
     &:hover {
       box-shadow: 2px 3px 6px grey;

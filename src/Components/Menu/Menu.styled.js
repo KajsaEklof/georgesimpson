@@ -1,38 +1,51 @@
-import styled from 'styled-components';
+import styled from "styled-components"
+import { device } from "../ComponentStyles/Device"
 
 export const StyledMenu = styled.nav`
+  background: #fafafa;
   display: flex;
+  display: ${({ open }) => (open ? "flex" : "none")};
   flex-direction: column;
-  justify-content: center;
-  background: grey;
-  height: 100vh;
-  text-align: left;
-  padding: 2rem;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 4em;
   position: absolute;
+  right: 0;
+  text-align: left;
   top: 0;
-  left: 0;
-  transition: transform 0.3s ease-in-out;
-  transform: translateX(-100%);
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+  transition: all 0.3s linear;
+  transform: translateX(100%);
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  width: 100%;
+  z-index: 999999;
 
+  @media ${device.desktop} {
+    display: none;
+  }
 
   a {
-    margin: 1em;
-    color: #000000;
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    position: relative;
+    color: #303030;
     display: block;
-
-  &:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      display: block;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1em auto;
+    position: relative;
+    text-decoration: none;
+    
+    &:after {
       background: #e54c14;
+      content: "";
+      display: block;
+      height: 3px;
+      position: absolute;
       transition: width 0.4s ease;
       -webkit-transition: width 0.4s ease;
+      width: 100%;
+    }
+
+    &:hover {
+      color: #e54c14;
+    }
   }
-}
 `

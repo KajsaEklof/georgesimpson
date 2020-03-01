@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import navigationStyles from "./navigation.module.css";
 import styled from "styled-components";
-import { device } from "./Device";
+import { device } from "./ComponentStyles/Device";
 
 
 const Navigation = props => {
@@ -16,7 +16,7 @@ const Navigation = props => {
     padding: 1em 2em 0em 1em;
     z-index: 99999;
 
-    @media ${device.desktop} {
+    @media ${device.mobile} {
       display:none;
     }
   `

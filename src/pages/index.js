@@ -1,36 +1,26 @@
-import React, { useState }  from "react";
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
-import Heading from '../Components/Heading';
-import Layout from '../Components/Layout';
-import PrimaryButton from '../Components/PrimaryButton';
-import Menu from '../Components/Menu';
-import Burger from "../Components/Burger";
+import React from "react"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
+import Layout from "../Components/Layout"
+import PrimaryButton from "../Components/PrimaryButton"
+import About from "../Components/About"
+import CenteredContainer from "../Components/ComponentStyles/CenteredContainer"
 
 library.add(fab, faCheckSquare, faCoffee)
 
 const IndexPage = () => {
-  const [open, setOpen ] = useState(false);
-    return (
+  console.log(window.location.pathname)
+  return (
+    <React.Fragment>
       <Layout>
-      { /*<Heading title="Home"/>
-
-      <PrimaryButton
-      text={"Click me!"}
-      link={"/contact/"}
-      />
-      <PrimaryButton
-      text={"View Showreel"}
-      link={"/contact/"}
-    /> */ }
-      <div> 
-      <Burger open={open} setOpen={setOpen} />
-      <Menu open={open} setOpen={setOpen} />
-      
-      </div>
+        <CenteredContainer>
+          <PrimaryButton text={"View Showreel"} link={"/contact/"} />
+        </CenteredContainer>
+        <About />
       </Layout>
-    )
-    };
-    
-    export default IndexPage;
+    </React.Fragment>
+  )
+}
+
+export default IndexPage

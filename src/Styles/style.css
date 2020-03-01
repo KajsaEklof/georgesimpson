@@ -1,44 +1,49 @@
 /* Global styles for project */
 html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-  body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 100%;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 h2 {
-    font-family: inherit;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: 1.45rem;
-    color: inherit;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    font-size: 1.38316rem;
-    line-height: 1.1;
+  font-family: inherit;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  color: inherit;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 2.441em;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 1em;
+  color: black;
 }
 
 *:focus:not(.focus-visible) {
-    outline: none;
-  }
+  outline: none;
+}
 
 .focus-visible {
-    outline: black dotted 4px;
-    outline-offset: 4px;
-  }
+  outline: black dotted 4px;
+  outline-offset: 4px;
+}
 
- 
-  
+img {
+  width: 100%;
+  height: auto;
+}
