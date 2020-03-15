@@ -3,9 +3,15 @@
 import React from "react";
 import Showreel from "../Images/Ismar Website Loop - Placeholder Cut-_1.mp4";
 import styled from "styled-components";
+import { device } from "./ComponentStyles/Device";
 
 const VideoContainer = styled.div`
 position: relative;
+
+@media ${device.mobile} {
+  margin-top: 15%;
+}
+
 `
 const OverlayText = styled.div`
 background: rgba(0,0,0,0);
@@ -28,7 +34,7 @@ letter-spacing: 0.03em;
 margin: 0;
 padding: 0;
 `
-const TagLine = styled.h2`
+const TagLine = styled.h3`
 color: white;
 text-align: center;
 text-transform: uppercase;
@@ -37,7 +43,7 @@ text-transform: uppercase;
 
 const HeaderVideo = () => {
   return (
-      <VideoContainer>
+    <VideoContainer>
     <video autoPlay={true} muted={true} loop={true} width="100%" >
     
     <source src={Showreel} type="video/mp4" />

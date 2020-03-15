@@ -21,11 +21,13 @@ const Navigation = props => {
     }
   `
   const StyledLink = styled(Link)`
-    margin: 1em;
     color: #000000;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
-    text-decoration: none;
+    font-weight: 500;
+    margin: 1em;
     position: relative;
+    text-decoration: none;
+
     &:hover {
         color: #e54c14;
         transition: color 0.4s ease;

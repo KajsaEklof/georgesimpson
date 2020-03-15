@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: "/georgesimpson",
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
@@ -14,7 +15,23 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      }
+      },
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/images/favicon.jpg",
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          yandex: false,
+          windows: false,
+        },
+      },
     },
   ],
 }

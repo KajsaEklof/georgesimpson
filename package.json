@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
@@ -22,6 +23,7 @@
     "focus-visible": "^5.0.2",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.39",
+    "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-sharp": "^2.4.4",
     "gatsby-plugin-styled-components": "^3.1.18",
     "gatsby-plugin-web-font-loader": "^1.0.4",
@@ -37,6 +39,7 @@
     "typeface-source-sans-pro": "0.0.75"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },
   "repository": {

@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 import { device } from "./ComponentStyles/Device";
+import George from "../Images/GeorgeSimpson.jpg";
 
 const About = () => {
 
@@ -32,6 +33,7 @@ const About = () => {
         solely. You can guarantee my hard working and adaptable nature will be
         present throughout production.
       </p>
+      <img src={George}/>
     </Container>
   )
 }
