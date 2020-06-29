@@ -1,6 +1,6 @@
 
 .footer {
-    background-color: #fafafa;
+    background-color: var(--sand);
     margin-top: 2em;
     font-size: 1em;
     padding: 0.5em 0.2em 0.5em 0.2em;

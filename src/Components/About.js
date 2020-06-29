@@ -2,20 +2,11 @@ import React from "react"
 import Styled from "styled-components"
 import { device } from "./ComponentStyles/Device"
 import George from "../Images/GeorgeSimpson_square.jpg"
-import aboutStyles from "./about.module.css";
-import SecondaryButton from "./SecondaryButton";
+import aboutStyles from "./about.module.css"
+import SecondaryButton from "./SecondaryButton"
+import Section from "./Section"
 
 const About = () => {
-  const Container = Styled.div`
-    line-height: 1.4;    
-    margin: 0 auto;
-
-            
-    @media ${device.desktop} {
-        width: 100%;
-      }
-    `
-
   const ContentContainer = Styled.div`
       display: flex;
       flex-direction: column-reverse;
@@ -27,8 +18,7 @@ const About = () => {
     `
 
   return (
-    <Container>
-      <h2 className={aboutStyles.heading}>About me</h2>
+    <Section title="About me">
       <ContentContainer>
         <div className={aboutStyles.blurb}>
           <p>Hello!</p>
@@ -58,23 +48,17 @@ const About = () => {
             whether that is in a team or working solely. You can guarantee my
             hard working and adaptable nature will be present throughout
             production.
-            </p>
-            <p>
-            Hope to work with you soon!
           </p>
+          <p>Hope to work with you soon!</p>
 
           <div className={aboutStyles.bgroup}>
-          <SecondaryButton text={"View Showreel"} link={"/work/"} />
-          <SecondaryButton text={"Contact"} link={"/contact/"} />
+            <SecondaryButton text={"View Showreel"} link={"/work/"} />
+            <SecondaryButton text={"Contact"} link={"/contact/"} />
           </div>
-
         </div>
-        <img src={George} width="200px" className={aboutStyles.image}/>
+        <img src={George} width="200px" className={aboutStyles.image} />
       </ContentContainer>
-    
-   
-
-    </Container>
+    </Section>
   )
 }
 

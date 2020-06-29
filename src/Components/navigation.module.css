@@ -28,10 +28,14 @@
   color: var(--green);
   transition: color 0.4s ease;
   -webkit-transition: color 0.4s ease;
+  font-weight: 500;
+
 }
 
 .active {
   color: var(--green);
+  font-weight: 500;
+
 }
 .active:after {
     content: "";

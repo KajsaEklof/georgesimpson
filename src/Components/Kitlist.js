@@ -1,27 +1,21 @@
 import React from "react"
 import { device } from "./ComponentStyles/Device"
 import styled from "styled-components"
+import Section from "./Section"
 
 const KitList = () => {
-  const Container = styled.div`
-    margin: 0 auto;
-    width: 100%;
-    padding-top: 2em;
-  `
-
   const ListContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     @media ${device.desktop} {
-        flex-direction: row;
+      flex-direction: row;
     }
   `
 
   return (
-    <Container>
-      <h2>Equipment</h2>
+    <Section title="Equipment">
       <ListContainer>
         <div>
           <h3>Steadicam</h3>
@@ -73,7 +67,7 @@ const KitList = () => {
           </ul>
         </div>
       </ListContainer>
-    </Container>
+    </Section>
   )
 }
 

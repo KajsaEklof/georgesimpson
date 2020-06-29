@@ -11,7 +11,9 @@ import Menu from "../Components/Menu"
 import Burger from "../Components/Burger"
 import Footer from "../Components/Footer"
 import layoutStyles from "../Components/layout.module.css"
-import KitList from "../Components/Kitlist";
+import KitList from "../Components/Kitlist"
+import RecentWork from "../Components/RecentWork"
+
 
 library.add(fab, faCheckSquare, faCoffee)
 
@@ -29,7 +31,8 @@ const IndexPage = () => {
       <div className={layoutStyles.content}>
         <About />
         <KitList />
-        </div>
+        <RecentWork />
+      </div>
 
       <Footer />
     </div>

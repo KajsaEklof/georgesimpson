@@ -5,13 +5,14 @@ import { Link } from "gatsby"
 import { device } from "./ComponentStyles/Device"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import LayoutStyles from "./layout.module.css"
 
 const SecondaryButton = props => {
   const LinkButton = styled(GatsbyLink)`
     font-family: "Futura PT", sans-serif;
     font-size: 0.9em;
     font-weight: bold;
-    color: black;
+    color: #ffffff;
     background-color: var(--green);
     margin: 0.5em;
     cursor: pointer;
@@ -23,12 +24,11 @@ const SecondaryButton = props => {
     width: fit-content;
 
     &:hover {
-      background-color: var(--green);
+      background-color: #367081;
       transition: 0.3s ease-in-out;
+      color: var(--sand);
     }
-    &:active {
-      box-shadow: none;
-    }
+
 
     @media ${device.desktop} {
       font-size: 1em;
@@ -41,7 +41,7 @@ const SecondaryButton = props => {
   }
 
   return (
-    <LinkButton to={props.link} role="button">
+    <LinkButton to={props.link} role="button" className={LayoutStyles.sink}>
       {props.text} <FontAwesomeIcon icon={faArrowRight} style={iconStyle} />
     </LinkButton>
   )
