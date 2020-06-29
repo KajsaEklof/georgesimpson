@@ -13,7 +13,6 @@ const Navigation = props => {
     position: sticky;
     top: 0;
     background: white;
-    padding: 1em 2em 0em 1em;
     z-index: 99999;
 
     @media ${device.mobile} {
@@ -29,7 +28,7 @@ const Navigation = props => {
     text-decoration: none;
 
     &:hover {
-        color: #e54c14;
+        color: var(--green);
         transition: color 0.4s ease;
         -webkit-transition: color 0.4s ease;
       }
@@ -47,36 +46,40 @@ const Navigation = props => {
       &:hover:after {
         width: 100%;
         left: 0;
-        background: #e54c14;
+        background: var(--green);
       } 
   `
 
   return (
     <Nav>
-      <StyledLink
+      <Link
         to="/"
+        className={navigationStyles.navLink}
         activeClassName={navigationStyles.active}
       >
         Home
-      </StyledLink>
-      <StyledLink
+      </Link>
+      <Link
         to="/work/"
+        className={navigationStyles.navLink}
         activeClassName={navigationStyles.active}
       >
         Work
-      </StyledLink>
-      <StyledLink
+      </Link>
+      <Link
         to="/behind-the-scenes/"
+        className={navigationStyles.navLink}
         activeClassName={navigationStyles.active}
       >
         Behind the Scenes
-      </StyledLink>
-      <StyledLink
+      </Link>
+      <Link
         to="/contact/"
+        className={navigationStyles.navLink}
         activeClassName={navigationStyles.active}
       >
         Contact/CV
-      </StyledLink>
+      </Link>
     </Nav>
   )
 }

@@ -11,6 +11,7 @@ import Menu from "../Components/Menu"
 import Burger from "../Components/Burger"
 import Footer from "../Components/Footer"
 import layoutStyles from "../Components/layout.module.css"
+import KitList from "../Components/Kitlist";
 
 library.add(fab, faCheckSquare, faCoffee)
 
@@ -19,20 +20,18 @@ const IndexPage = () => {
   return (
     <div className={layoutStyles.container}>
       <Header />
-
       <div>
-        <Burger open={open} setOpen={setOpen} color={"white"}/>
+        <Burger open={open} setOpen={setOpen} color={"white"} />
         <Menu open={open} setOpen={setOpen} />
       </div>
 
       <HeaderVideo />
       <div className={layoutStyles.content}>
-        <CenteredContainer>
-          <PrimaryButton text={"View Showreel"} link={"/work/"} />
-        </CenteredContainer>
         <About />
-        <Footer />
-      </div>
+        <KitList />
+        </div>
+
+      <Footer />
     </div>
   )
 }

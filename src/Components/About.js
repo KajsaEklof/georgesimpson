@@ -1,39 +1,79 @@
-import React from "react";
-import Styled from "styled-components";
-import { device } from "./ComponentStyles/Device";
-import George from "../Images/GeorgeSimpson.jpg";
+import React from "react"
+import Styled from "styled-components"
+import { device } from "./ComponentStyles/Device"
+import George from "../Images/GeorgeSimpson_square.jpg"
+import aboutStyles from "./about.module.css";
+import SecondaryButton from "./SecondaryButton";
 
 const About = () => {
-
-    const Container = Styled.div`
+  const Container = Styled.div`
     line-height: 1.4;    
     margin: 0 auto;
+
             
     @media ${device.desktop} {
-        width: 60%;
+        width: 100%;
       }
     `
+
+  const ContentContainer = Styled.div`
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+
+      @media ${device.desktop} {
+        flex-direction: row;
+      }
+    `
+
   return (
     <Container>
-      <h2>About me</h2>
-      <p>
-        I am a professionally trained, freelance Steadicam Operator/ Owner and
-        Camera Operator based in south London. After graduating from
-        Ravensbourne University with a degree in Broadcast Operations I went on
-        to work at one of London’s largest and busiest broadcast hire
-        facilities. There I learnt the equipment inside and out and honed my
-        operating and assisting skills when out crewing on such shows as Peep
-        Show and Made in Chelsea. After 2 and a half years working at the
-        facilities company I went on to follow my true passion of Steadicam. I
-        have now been operating for over 4 years working on multiple short
-        films, music promos and corporate events. As well as Steadicam, I often
-        operate for many talented DOPs, working across corporate, documentary,
-        music promos, entertainment and TV drama. I strive to impress in any
-        professional environment I work in, whether that is in a team or working
-        solely. You can guarantee my hard working and adaptable nature will be
-        present throughout production.
-      </p>
-      <img src={George}/>
+      <h2 className={aboutStyles.heading}>About me</h2>
+      <ContentContainer>
+        <div className={aboutStyles.blurb}>
+          <p>Hello!</p>
+          <p>
+            Thank you for visiting my website and checking out some of my work.
+            I am an enthusiastic and passionate camera operator and steadicam
+            operator/owner based in Dorking, Surrey.
+          </p>
+          <p>
+            A bit about me, after graduating from Ravensbourne University with a
+            degree in Broadcast Operations I went on to work at one of London's
+            largest and busiest broadcast hire facilities. There I learnt the
+            equipment inside and out and honed my operating and assisting skills
+            when out crewing on such shows as Peep Show and Made in Chelsea. 
+          </p>
+
+          <p>
+            After two and a half years working at the facilities company I went
+            on to follow my true passion of Steadicam. I have now been operating
+            for over four years working on multiple short films, music promos
+            and corporate events.  As well as Steadicam, I operate for many
+            talented DOPs, working across corporate, documentary, music promos,
+            entertainment and TV drama.
+          </p>
+          <p>
+            I strive to impress in any professional environment I work in,
+            whether that is in a team or working solely. You can guarantee my
+            hard working and adaptable nature will be present throughout
+            production.
+            </p>
+            <p>
+            Hope to work with you soon!
+          </p>
+
+          <div className={aboutStyles.bgroup}>
+          <SecondaryButton text={"View Showreel"} link={"/work/"} />
+          <SecondaryButton text={"Contact"} link={"/contact/"} />
+          </div>
+
+        </div>
+        <img src={George} width="200px" className={aboutStyles.image}/>
+      </ContentContainer>
+    
+   
+
     </Container>
   )
 }

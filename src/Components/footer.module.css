@@ -38,12 +38,12 @@
 }
 
 .underline {
-  border-bottom: 2px #e54c14 solid;
+  border-bottom: 2px var(--green) solid;
   width: fit-content;
 }
 
 .links:hover {
-  color: #e54c14;
+  color: var(--green);
   transition: color 0.2s linear;
 
 }
@@ -54,7 +54,7 @@
 }
 
 .icon:hover {
-  color: #e54c14;
+  color: var(--green);
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }

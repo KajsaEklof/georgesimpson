@@ -1,27 +1,30 @@
-import React from "react";
-import styled from "styled-components";
-import { Link as GatsbyLink} from "gatsby";
-import { device } from "./ComponentStyles/Device";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react"
+import styled from "styled-components"
+import { Link as GatsbyLink } from "gatsby"
+import { Link } from "gatsby"
+import { device } from "./ComponentStyles/Device"
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const PrimaryButton = props => {
   const LinkButton = styled(GatsbyLink)`
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Futura PT", sans-serif;
     font-size: 0.9em;
     font-weight: bold;
     color: black;
-    background-color: #fafafa;
+    background-color: hsla(0, 0%, 100%, 0.7);
     margin: 0.5em;
     cursor: pointer;
     padding: 0.5em 1.2em;
-    border: solid #e54c14 3px;
+    /*border: solid var(--green) 3px;*/
+    border-radius: 50px;
     text-decoration: none;
     /*box-shadow: 3px 3px 6px 1px #828282b5; */
-    width: fit-content; 
+    width: fit-content;
 
     &:hover {
-      box-shadow: 2px 3px 6px grey;
+      background-color: var(--green);
+      transition: 0.3s ease-in-out;
     }
     &:active {
       box-shadow: none;
@@ -33,14 +36,15 @@ const PrimaryButton = props => {
     }
   `
 
+
   const iconStyle = {
     paddingLeft: "0.3em",
   }
 
   return (
-    <LinkButton to={props.link} role="button">
+      <LinkButton to={props.link} role="button">
         {props.text} <FontAwesomeIcon icon={faArrowRight} style={iconStyle} />
-    </LinkButton>
+      </LinkButton>
   )
 }
 

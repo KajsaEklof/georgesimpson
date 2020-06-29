@@ -1,9 +1,10 @@
 .navLink {
-  margin: 1em;
   color: #000000;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  text-decoration: none;
+  font-weight: 500;
+  margin: 1em;
   position: relative;
+  text-decoration: none;
 }
 .navLink:after {
   content: "";
@@ -20,17 +21,17 @@
 .navLink:hover:after {
   width: 100%;
   left: 0;
-  background: #e54c14;
+  background: var(--green);
 }
 
 .navLink:hover {
-  color: #e54c14;
+  color: var(--green);
   transition: color 0.4s ease;
   -webkit-transition: color 0.4s ease;
 }
 
 .active {
-  color: #e54c14;
+  color: var(--green);
 }
 .active:after {
     content: "";
@@ -39,5 +40,5 @@
     height: 3px;
     display: block;
     right: 0;
-    background: #e54c14;
+    background: var(--green);
 }

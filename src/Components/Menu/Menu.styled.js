@@ -34,7 +34,7 @@ export const StyledMenu = styled.nav`
     text-decoration: none;
     
     &:after {
-      background: #e54c14;
+      background: var(--green);
       content: "";
       display: block;
       height: 3px;
@@ -45,7 +45,7 @@ export const StyledMenu = styled.nav`
     }
 
     &:hover {
-      color: #e54c14;
+      color: var(--green);
     }
   }
 `

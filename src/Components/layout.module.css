@@ -1,3 +1,9 @@
+:root {
+  --orange: #e54c14;
+  --green: #5f8465;
+}
+
+
 body {
   background-color: #ffffff;
   font-family: "Source Sans Pro", sans-serif;
@@ -20,8 +26,12 @@ body {
   max-width: 80%;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Futura PT', sans-serif;
+}
+
 @media only screen and (min-width: 1000px) {
   .content {
-    padding: 2em 3em 2em 3em;
+    padding: 5em 3em 2em 3em;
   }
 }
