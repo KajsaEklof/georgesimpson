@@ -33,5 +33,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: 'rhr1wiy',
+        }
+      }
+    },
   ],
 }

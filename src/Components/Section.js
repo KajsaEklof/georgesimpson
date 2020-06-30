@@ -8,9 +8,13 @@ const Section = props => {
     width: 100%;
     padding-top: 2em;
   `
+
+  const Heading = styled.h2`
+    letter-spacing: -2px;
+  `
   return (
     <Container>
-      <h2>{props.title}</h2>
+      <Heading>{props.title}</Heading>
       {props.children}
     </Container>
   )
