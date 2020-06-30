@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{Ofmp:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),o=a.n(n),c=a("JLE3"),r=a("Wbzz"),l=a("GnN6");t.default=function(){return o.a.createElement(c.a,null,o.a.createElement(l.a,{title:"Work"}),o.a.createElement(r.a,{to:"/",style:{clear:"both"}},"Back to home"))}}}]);
+//# sourceMappingURL=component---src-pages-work-js-c8dbd09115a73f7ea548.js.map
