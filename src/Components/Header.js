@@ -15,14 +15,14 @@ const Header = props => {
   `
 
   const Logo = styled.div`
-    font-family: "Futura PT";
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 600;
+    font-style: italic;
     font-size: 2em;
     display: flex;
     align-items: center;
     padding: 0em 0em 0em 1em;
     letter-spacing: -3px;
-    font-weight: 600;
-    font-style: italic;
   `
 
   return (
