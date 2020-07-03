@@ -1,7 +1,7 @@
 :root {
-  --orange: #e54c14;
-  --green: #517058;
-  --blue: #367081;
+  --brightorange: #e54c14;
+  --olivegreen: #517058;
+  --seablue: #367081;
   --sand: #f4eee1;
 }
 
@@ -24,7 +24,6 @@ body {
   flex-grow: 1;
   padding: 5em 2em 2em 2em;
   margin: 0 auto;
-  max-width: 80%;
 }
 
 h1,

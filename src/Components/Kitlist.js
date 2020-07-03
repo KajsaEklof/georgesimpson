@@ -2,6 +2,8 @@ import React from "react"
 import { device } from "./ComponentStyles/Device"
 import styled from "styled-components"
 import Section from "./Section"
+import "bootstrap/dist/css/bootstrap.min.css"
+
 
 const KitList = () => {
   const ListContainer = styled.div`
@@ -16,8 +18,8 @@ const KitList = () => {
 
   return (
     <Section title="Equipment">
-      <ListContainer>
-        <div>
+      <div className="row">
+        <div class="col-md-6">
           <h3>Steadicam</h3>
           <ul>
             <li>Steadicam EFP HD Carbon Fibre Rig</li>
@@ -42,7 +44,7 @@ const KitList = () => {
             <li>Rotating Polariser Filter</li>
           </ul>
         </div>
-        <div>
+        <div className="col-md-6">
           <h3>Monitors / Wireless</h3>
           <ul>
             <li>Atomos Sumo 19 inch Monitor/Recorder</li>
@@ -66,7 +68,7 @@ const KitList = () => {
             <li>VW T5 SWB Van with integrated shelving</li>
           </ul>
         </div>
-      </ListContainer>
+      </div>
     </Section>
   )
 }

@@ -13,18 +13,19 @@ const SecondaryButton = props => {
     font-size: 0.9em;
     font-weight: bold;
     color: #ffffff;
-    background-color: var(--green);
+    background-color: var(--olivegreen);
     margin: 0.5em;
     cursor: pointer;
     padding: 0.5em 1.2em;
-    /*border: solid var(--green) 3px;*/
+    /*border: solid var(--olivegreen) 3px;*/
     border-radius: 50px;
     text-decoration: none;
     /*box-shadow: 3px 3px 6px 1px #828282b5; */
-    width: fit-content;
+    width: 50%;
+    text-align: center;
 
     &:hover {
-      background-color: #367081;
+      background-color: var(--seablue);
       transition: 0.3s ease-in-out;
       color: var(--sand);
     }

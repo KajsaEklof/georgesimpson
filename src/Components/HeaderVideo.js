@@ -8,9 +8,9 @@ import PrimaryButton from "../Components/PrimaryButton"
 
 const VideoContainer = styled.div`
   position: relative;
-  top: 3em;
-  @media ${device.mobile} {
-    margin-top: 15%;
+  height: calc(100vh - 6em);
+  @media ${device.desktop} {
+    margin-top: 0;
   }
 `
 const OverlayText = styled.div`
@@ -24,12 +24,13 @@ const OverlayText = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: calc(100vh - 6em);
 `
 
 const TopText = styled.h1`
   color: white;
   text-align: center;
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 600;
   line-height: 1.1;
   margin: 0;
@@ -41,16 +42,26 @@ const TagLine = styled.h3`
   color: white;
   text-align: center;
   text-transform: uppercase;
+  font-size: 1.17em;
 `
 
 const Bgroup = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   padding-top: 2em;
-  @media ${device.mobile} {
-    flex-direction: column;
+  align-items: center;
+  width: 100%; 
+  @media ${device.desktop} {
+    flex-direction: row;
   }
+`
+
+const Image = styled.img`
+height: calc(100vh - 6em);
+width: auto;
+position: absolute;
+right: -350px;
 `
 
 const HeaderVideo = () => {
@@ -61,7 +72,7 @@ const HeaderVideo = () => {
     <source src={Showreel} type="video/mp4" />
     Sorry, your browser doesn't support embedded videos.
   </video>*/}
-      <img src={Showreel} width="100vw" />
+      <Image src={Showreel} />
 
       <OverlayText>
         <TopText>George Simpson</TopText>

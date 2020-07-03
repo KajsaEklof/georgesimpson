@@ -1,3 +1,4 @@
+ 
 .navLink {
   color: #000000;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -21,11 +22,11 @@
 .navLink:hover:after {
   width: 100%;
   left: 0;
-  background: var(--green);
+  background: var(--olivegreen);
 }
 
 .navLink:hover {
-  color: var(--green);
+  color: var(--olivegreen);
   transition: color 0.4s ease;
   -webkit-transition: color 0.4s ease;
   font-weight: 500;
@@ -33,7 +34,7 @@
 }
 
 .active {
-  color: var(--green);
+  color: var(--olivegreen);
   font-weight: 500;
 
 }
@@ -44,5 +45,23 @@
     height: 3px;
     display: block;
     right: 0;
-    background: var(--green);
+    background: var(--olivegreen);
+}
+
+.logo {
+  font-family: futura-pt-bold, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  padding: 0em 0em 0em 1em;
+  letter-spacing: -3px;
+  color: #000000;
+}
+
+.logo:hover {
+  color: var(--olivegreen);
+  transition: color 0.4s ease;
+  -webkit-transition: color 0.4s ease;
 }

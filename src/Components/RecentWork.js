@@ -3,9 +3,11 @@ import { device } from "./ComponentStyles/Device"
 import styled from "styled-components"
 import Section from "./Section"
 import SecondaryButton from "./SecondaryButton"
+import "bootstrap/dist/css/bootstrap.min.css"
+import Video from "./Video"
 
 const RecentWork = () => {
-  const Video = styled.div`
+  const Video2 = styled.div`
     width: 30%;
     height: 200px;
     background: var(--blue);
@@ -19,8 +21,11 @@ const RecentWork = () => {
 
   const ButtonContainer = styled.div`
     display: flex;
-    justify-content: flex-end;
-    padding-bottom:1em ;
+    justify-content: flex-start;
+    padding-bottom: 1em;
+    @media ${device.desktop} {
+      justify-content: flex-end;
+    }
   `
 
   return (
@@ -29,17 +34,32 @@ const RecentWork = () => {
         <SecondaryButton link="/work/" text="View all work" />
       </ButtonContainer>
 
-      <Container>
-        <Video>
-          <h4>First video</h4>
-        </Video>
-        <Video>
-          <h4>Second video</h4>
-        </Video>
-        <Video>
-          <h4>Third video</h4>
-        </Video>
-      </Container>
+        <div className="row align-items-center">
+          <div className="col-md-4">
+            <h4>First video</h4>
+            <Video
+              videoSrcURL="https://www.youtube.com/embed/fKsuTtIHUwk"
+              videoTitle="Official Music Video on YouTube"
+            />
+          </div>
+
+          <div className="col-md-4">
+            <h4>Second video</h4>
+            <Video
+              videoSrcURL="https://www.youtube.com/embed/fKsuTtIHUwk"
+              videoTitle="Official Music Video on YouTube"
+            />
+          </div>
+
+          <div className="col-md-4">
+            <h4>Third video</h4>
+            <Video
+              videoSrcURL="https://www.youtube.com/embed/fKsuTtIHUwk"
+              videoTitle="Official Music Video on YouTube"
+            />
+          </div>
+        </div>
+
     </Section>
   )
 }

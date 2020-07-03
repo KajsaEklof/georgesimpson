@@ -4,12 +4,13 @@
 
 .blurb {
     width: 100%;
+    font-family: "Source Sans Pro", sans-serif;
+    padding-top: 1em;
 }
 
 .image {
-    width: 80%;
+    width: 100%;
     align-self: flex-start;
-    padding-top: 3em;
 }
 
 .bgroup {
