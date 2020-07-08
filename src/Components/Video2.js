@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Image from "../images/behind.jpg"
+import Image from "../../static/images/behind.jpg"
 import videoStyles from "./video.module.css"
 
 class Videooverlay extends Component {

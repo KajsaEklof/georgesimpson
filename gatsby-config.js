@@ -15,13 +15,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/images`,
       },
     },
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/images/favicon.jpg",
+        logo: "./static/images/favicon.jpg",
         icons: {
           android: true,
           appleIcon: true,

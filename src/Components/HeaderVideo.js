@@ -1,7 +1,6 @@
 // https://codepen.io/icutpeople/pen/whueK Text over video
 
 import React from "react"
-import Showreel from "../Images/behindthescenes.jpg"
 import styled from "styled-components"
 import { device } from "./ComponentStyles/Device"
 import PrimaryButton from "../Components/PrimaryButton"
