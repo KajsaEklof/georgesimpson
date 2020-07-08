@@ -33,7 +33,6 @@
     "gatsby-source-filesystem": "^2.3.18",
     "gatsby-transformer-sharp": "^2.5.10",
     "react": "^16.13.1",
-    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.1.1",
