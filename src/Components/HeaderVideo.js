@@ -35,7 +35,7 @@ const OverlayText = styled.div`
 `
 
 const TopText = styled.h1`
-  color: white;
+  color: #ffffff;
   text-align: center;
   font-size: 3em;
   font-weight: 600;
@@ -46,7 +46,7 @@ const TopText = styled.h1`
   font-style: italic;
 `
 const TagLine = styled.h3`
-  color: white;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.17em;
@@ -75,7 +75,7 @@ const Image = styled.img`
 const HeaderVideo = () => {
   const data = useStaticQuery(graphql`
     query HeaderImage {
-      image: file(relativePath: { eq: "behind.jpg" }) {
+      image: file(relativePath: { eq: "GS_inhills_800.jpg" }) {
         childImageSharp {
           fixed {
             ...GatsbyImageSharpFixed

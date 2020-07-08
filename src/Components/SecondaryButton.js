@@ -19,7 +19,7 @@ const SecondaryButton = props => {
     border-radius: 50px;
     text-decoration: none;
     /*box-shadow: 3px 3px 6px 1px #828282b5; */
-    width: 50%;
+    width: 60%;
     text-align: center;
 
     &:hover {
@@ -32,6 +32,7 @@ const SecondaryButton = props => {
     @media ${device.desktop} {
       font-size: 1em;
       padding: 0.5em 2em;
+      width: 30%;
     }
   `
 

@@ -11,7 +11,7 @@ import Img from "gatsby-image"
 const ContactPage = () => {
   const data = useStaticQuery(graphql`
     query ContactImage {
-      image: file(relativePath: { eq: "contact.jpg" }) {
+      image: file(relativePath: { eq: "GeorgeSimpson_bythesea_400.jpg" }) {
         childImageSharp {
           fixed(width: 600) {
             ...GatsbyImageSharpFixed

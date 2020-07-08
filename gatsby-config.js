@@ -12,6 +12,15 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-remark-video-poster`,
+      options: {
+        // Size of the poster in pixels
+        // By default width is 1920px (HD video width)
+        // If your container is smaller, you should specify a smaller size
+        width: 350,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

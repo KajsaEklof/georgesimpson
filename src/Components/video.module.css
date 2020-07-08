@@ -1,6 +1,6 @@
 .overlay {
-    width: 25em;
-    height: 20em;
+    width: 350px;
+    height: 200px;
 }
 
 .videocontainer {
@@ -10,6 +10,17 @@
 }
 
 .iframe {
-    width: 25em;
-    height: 20em;
+    width: 350px;
+    height: 200px;
+}
+
+.overlayContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    position: absolute;
 }

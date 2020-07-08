@@ -13,18 +13,18 @@ import SecondaryButton from "../Components/SecondaryButton"
 import Footer from "../Components/Footer"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import Link from 'gatsby'
+import Link from "gatsby"
 // This ensures that the icon CSS is loaded immediately before attempting to render icons
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import { config } from "@fortawesome/fontawesome-svg-core"
 // Prevent fontawesome from dynamically adding its css since we did it manually above
-config.autoAddCss = false;
+config.autoAddCss = false
 library.add(fab, faArrowRight)
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query GeorgeImage {
-      image: file(relativePath: { eq: "GeorgeSimpson_large.jpg" }) {
+      image: file(relativePath: { eq: "GS_Square.jpg" }) {
         childImageSharp {
           fixed {
             ...GatsbyImageSharpFixed
@@ -36,7 +36,6 @@ const IndexPage = () => {
       }
     }
   `)
-  
 
   return (
     <div>
@@ -46,7 +45,7 @@ const IndexPage = () => {
         <Section title="About me">
           <div className="row">
             <div className="col-lg">
-              <h3>Hello!</h3>
+              <p>Hello!</p>
               <p>
                 Thank you for visiting my website and checking out some of my
                 work. I am an enthusiastic and passionate camera operator and
@@ -93,7 +92,7 @@ const IndexPage = () => {
 
         <Section title="Equipment">
           <div className="row">
-            <div class="col-lg">
+            <div className="col-lg">
               <h3>Steadicam</h3>
               <ul>
                 <li>Steadicam EFP HD Carbon Fibre Rig</li>

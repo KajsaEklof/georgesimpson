@@ -6,6 +6,7 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => {
     width: 100%;
     height: 100%;
   `
+
   return (
     <Videocontainer>
       <iframe
@@ -17,9 +18,10 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => {
         mozallowfullscreen="true"
         allowFullScreen
         modestbranding="0"
-        width="100%"
-        height="100%"
+        width="350px"
+        height="200px"
       />
+      
     </Videocontainer>
   )
 }

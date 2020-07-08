@@ -11,7 +11,7 @@ const IndexNavigation = props => {
   return (
     <div>
       <Navigation />
-      <div class={layoutStyles.mobilenavbar}>
+      <div className={layoutStyles.mobilenavbar}>
         <Link to="/" className={layoutStyles.logo}>
           George Simpson
         </Link>
