@@ -4,10 +4,7 @@ import styled from "styled-components"
 import Section from "./Section"
 import SecondaryButton from "./SecondaryButton"
 import "bootstrap/dist/css/bootstrap.min.css"
-import Video from "./Video"
 import VideoOverlay from "./Video2"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import Image from "../../static/images/Video Layover Images/BlackHoneyDig.jpg"
 import { v4 as uuidv4 } from 'uuid';
 
@@ -20,20 +17,6 @@ const RecentWork = () => {
       justify-content: flex-end;
     }
   `
-  const data = useStaticQuery(graphql`
-    query OverlayImage {
-      image: file(relativePath: { eq: "GeorgeSimpson_bythesea_400.jpg" }) {
-        childImageSharp {
-          fixed(width: 600) {
-            ...GatsbyImageSharpFixed
-          }
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <Section title="Recent Work">
@@ -41,7 +24,8 @@ const RecentWork = () => {
         <SecondaryButton link="/work/" text="View all work" />
       </ButtonContainer>
 
-      <div className="row align-items-center">
+      <div className="container">
+      <div className="row display-flex">
         <div className="col-xl-4">
           <h4>First video</h4>
           <VideoOverlay
@@ -99,6 +83,7 @@ const RecentWork = () => {
             overlay={Image}
           />
         </div>
+      </div>
       </div>
     </Section>
   )

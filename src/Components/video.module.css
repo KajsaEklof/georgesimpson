@@ -1,6 +1,6 @@
 .overlay {
-    width: 350px;
-    height: 200px;
+    width: 100%;
+    height: auto;
 }
 
 .videocontainer {
@@ -10,8 +10,7 @@
 }
 
 .iframe {
-    width: 350px;
-    height: 200px;
+    width: 100%;
 }
 
 .overlayContainer {
@@ -23,4 +22,12 @@
 
 .button {
     position: absolute;
+    border-radius: 50%;
+    border: none;
+    width: 4em;
+    height: 4em;
+    background-color: var(--olivegreen);
+    color: #ffffff;
+    box-shadow: 3px 3px 2px black;
+    font-weight: bold;
 }

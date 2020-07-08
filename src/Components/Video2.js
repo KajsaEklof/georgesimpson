@@ -5,20 +5,11 @@ class VideoOverlay extends Component {
   constructor(props) {
     super(props)
     // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this)
-    this.handleTab = this.handleTab.bind(this)
+    // this.handleClick = this.handleClick.bind(this)
+    // this.handleTab = this.handleTab.bind(this)
   }
 
-  handleClick(ev) {
-    const thevid = document.getElementById(`${this.props.videoID}`)
-    const thebutton = document.getElementById(`${this.props.buttonID}`)
-    const theimage = document.getElementById(`${this.props.imageID}`)
-    thebutton.style.display = "none"
-    theimage.style.display = "none"
-    thevid.style.display = "block"
-    thevid.src += "?autoplay=1&modestbranding=1&color=red"
-  }
-
+  
   // handleTab(ev) {
   //   const thevid = document.getElementById(`${this.props.videoID}`)
   //   const thebutton = document.getElementById(`${this.props.buttonID}`)
@@ -30,19 +21,41 @@ class VideoOverlay extends Component {
   // }
 
   render() {
+    const myButtonID = this.props.buttonID  
+
+    const handleClick = event => {
+      event.preventDefault();
+      const theButton = event.target
+      const theImage = theButton.nextElementSibling
+      const theVideo = theImage.nextElementSibling
+      
+      const theVideoID = theVideo.id
+      const theImageID = theImage.id
+
+      theButton.style.display = "none"
+      theImage.style.display = "none"
+      theVideo.style.display = "block"
+      theVideo.src += "?autoplay=1&modestbranding=1&color=red"
+
+    }
+    
+
     return (
       <div className={videoStyles.videocontainer}>
         <div className={videoStyles.overlayContainer}>
           <button
-          type="button" name="play-button"
+            style={{ display: " " }}
+            type="button"
             id={this.props.buttonID}
+            value={this.props.buttonID}
             className={videoStyles.button}
-            onClick={this.handleClick}
+            onClick={handleClick}
             // onKeyDown={this.handleTab}
           >
-            Click me
+            Play
           </button>
           <img
+            style={{ display: " " }}
             id={this.props.imageID}
             alt={this.props.alt}
             src={this.props.overlay}
@@ -57,8 +70,6 @@ class VideoOverlay extends Component {
             allowFullScreen
             allow="autoplay; picture-in-picture"
             title={this.props.videoTitle}
-            width="350px"
-            height="200px"
           ></iframe>
         </div>
       </div>

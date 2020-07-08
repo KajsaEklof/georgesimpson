@@ -65,13 +65,6 @@ const Bgroup = styled.div`
   }
 `
 
-const Image = styled.img`
-  height: calc(100vh - 6em);
-  width: auto;
-  position: absolute;
-  right: -350px;
-`
-
 const HeaderVideo = () => {
   const data = useStaticQuery(graphql`
     query HeaderImage {

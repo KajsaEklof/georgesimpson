@@ -13,7 +13,6 @@ import SecondaryButton from "../Components/SecondaryButton"
 import Footer from "../Components/Footer"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import Link from "gatsby"
 // This ensures that the icon CSS is loaded immediately before attempting to render icons
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
