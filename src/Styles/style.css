@@ -48,16 +48,19 @@ img {
   height: auto;
 }
 
+a {
+  color: var(--olivegreen);
+}
+
 a:hover {
   text-decoration: none !important;
 }
 
 .navigationbar {
- background: #fff;
+  background: #fff;
 }
 
-
-/* Desktop Styles */
+/*Desktop Styles  */
 @media only screen and (max-width: 1000px) {
   .navigationbar {
     display: none !important;

@@ -1,33 +1,36 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 // import "../Styles/index.css";
-import "../Styles/style.css";
-import layoutStyles from "./layout.module.css";
-import Footer from "./Footer";
-import "typeface-source-sans-pro";
-import "typeface-bebas-neue";
-import "typeface-poppins";
-import "focus-visible";
-import Menu from "./Menu";
-import Burger from "./Burger";
-
-
-
+import "../Styles/style.css"
+import layoutStyles from "./layout.module.css"
+import Footer from "./Footer"
+import "typeface-source-sans-pro"
+import "typeface-bebas-neue"
+import "typeface-poppins"
+import "focus-visible"
+import Menu from "./Menu"
+import Burger from "./Burger"
+import Navigation from "./Navigation"
+import { Link } from "gatsby"
 
 const Layout = props => {
   const [open, setOpen] = useState(false)
 
   return (
-
     <div className={layoutStyles.container}>
-      <div>
-        <Burger open={open} setOpen={setOpen} />
-        <Menu open={open} setOpen={setOpen} />
+      <Navigation />
+      <div class={layoutStyles.mobilenavbar}>
+        <Link to="/" className={layoutStyles.logo}>
+          George Simpson
+        </Link>
+        <div>
+          <Burger open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen} />
+        </div>
       </div>
 
       <main className={layoutStyles.content}>{props.children}</main>
       <Footer />
     </div>
-
   )
 }
 

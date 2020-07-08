@@ -1,5 +1,4 @@
 import React from "react"
-import { device } from "./ComponentStyles/Device"
 import styled from "styled-components"
 
 const Section = props => {

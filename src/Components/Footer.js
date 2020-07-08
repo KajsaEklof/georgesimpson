@@ -21,6 +21,7 @@ const Footer = () => {
             href="https://www.instagram.com/steadi_g/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Follow me on Instagram"
           >
             <FontAwesomeIcon
               icon={["fab", "instagram"]}
@@ -32,6 +33,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/george-simpson-82843541/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Connect on LinkedIn"
           >
             <FontAwesomeIcon
               icon={["fab", "linkedin"]}

@@ -16,7 +16,7 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => {
         webkitallowfullscreen="true"
         mozallowfullscreen="true"
         allowFullScreen
-        modestbranding="1"
+        modestbranding="0"
         width="100%"
         height="100%"
       />

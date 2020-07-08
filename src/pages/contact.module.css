@@ -1,6 +1,6 @@
 .link {
   text-decoration: none;
-  color: #303030;
+  color: var(--olivegreen);
   display: inline-block;
   font-weight: bold;
   line-height: 1.5em;
@@ -11,10 +11,10 @@
   display: block;
   width: 100%;
   height: 2px;
-  background: #e54c14;
+  background: var(--olivegreen);
 }
 .link:hover {
-  color: #e54c14;
+  color: var(--olivegreen);
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
@@ -42,11 +42,11 @@
   display: block;
   width: 100%;
   height: 2px;
-  background: #e54c14;
+  background: var(--olivegreen);
 }
 
 .socialLink:hover {
-  color: #e54c14;
+  color: var(--olivegreen);
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
@@ -56,9 +56,51 @@
 }
 
 .icon:hover {
-  color: #e54c14;
+  color: var(--olivegreen);
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
+}
+
+.download {
+  font-family: "Futura PT", sans-serif;
+  font-display: swap;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--olivegreen);
+  margin: 0.5em;
+  cursor: pointer;
+  padding: 0.5em 1.2em;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.download:hover {
+  background-color: var(--seablue);
+  transition: 0.3s ease-in-out;
+  color: var(--sand);
+}
+
+/* Sink */
+.sink {
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.sink:hover {
+  transform: translateY(5px);
+}
+
+.img {
+  padding-top: 2em;
+}
+
+.wrapper {
+  width: 100%;
 }
 
 @media only screen and (min-width: 1000px) {

@@ -1,9 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
-import { Link } from "gatsby"
 import { device } from "./ComponentStyles/Device"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import LayoutStyles from "./layout.module.css"
 
@@ -46,7 +44,7 @@ const PrimaryButton = props => {
 
   return (
       <LinkButton to={props.link} role="button" className={LayoutStyles.sink}>
-        {props.text} <FontAwesomeIcon icon={faArrowRight} style={iconStyle} />
+        {props.text} <FontAwesomeIcon icon="arrow-right" style={iconStyle} size="lg"/>
       </LinkButton>
   )
 }

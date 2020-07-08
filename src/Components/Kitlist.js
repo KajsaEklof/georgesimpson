@@ -1,21 +1,8 @@
 import React from "react"
-import { device } from "./ComponentStyles/Device"
-import styled from "styled-components"
 import Section from "./Section"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-
 const KitList = () => {
-  const ListContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    @media ${device.desktop} {
-      flex-direction: row;
-    }
-  `
-
   return (
     <Section title="Equipment">
       <div className="row">

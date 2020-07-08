@@ -1,10 +1,11 @@
 import React from "react"
 import Styled from "styled-components"
 import { device } from "./ComponentStyles/Device"
-import George from "../Images/GeorgeSimpson_square.jpg"
 import aboutStyles from "./about.module.css"
 import SecondaryButton from "./SecondaryButton"
 import Section from "./Section"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const About = () => {
   const ContentContainer = Styled.div`
@@ -16,6 +17,22 @@ const About = () => {
         flex-direction: row;
       }
     `
+  const data = useStaticQuery(graphql`
+    query AboutImage {
+      image: file(relativePath: { eq: "GeorgeSimpson_square.jpg" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(data)
 
   return (
     <Section title="About me">
@@ -55,8 +72,8 @@ const About = () => {
             <SecondaryButton text={"View Showreel"} link={"/work/"} />
             <SecondaryButton text={"Contact"} link={"/contact/"} />
           </div>
+          <Img fixed={data.image.childImageSharp.fixed} />
         </div>
-        <img src={George} width="200px" className={aboutStyles.image} />
       </ContentContainer>
     </Section>
   )

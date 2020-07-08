@@ -13,11 +13,6 @@ const Menu = ({ open }) => {
       <Link to="/work">
         Work
         </Link>
-        <Link
-        to="/behind-the-scenes/"
-      >
-        Behind the Scenes
-      </Link>
       <Link to="/contact">
         Contact
         </Link>

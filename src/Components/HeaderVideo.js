@@ -5,12 +5,16 @@ import Showreel from "../Images/behindthescenes.jpg"
 import styled from "styled-components"
 import { device } from "./ComponentStyles/Device"
 import PrimaryButton from "../Components/PrimaryButton"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import HeaderVideoStyles from "./headerVideo.module.css"
 
 const VideoContainer = styled.div`
   position: relative;
-  height: calc(100vh - 6em);
+  height: 100vh;
   @media ${device.desktop} {
     margin-top: 0;
+    height: calc(100vh/2);
   }
 `
 const OverlayText = styled.div`
@@ -25,6 +29,10 @@ const OverlayText = styled.div`
   align-items: center;
   justify-content: center;
   height: calc(100vh - 6em);
+
+  @media ${device.desktop} {
+    height: calc(100vh/2);
+  }
 `
 
 const TopText = styled.h1`
@@ -51,29 +59,43 @@ const Bgroup = styled.div`
   justify-content: space-evenly;
   padding-top: 2em;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   @media ${device.desktop} {
     flex-direction: row;
+    max-width: 50%;
   }
 `
 
 const Image = styled.img`
-height: calc(100vh - 6em);
-width: auto;
-position: absolute;
-right: -350px;
+  height: calc(100vh - 6em);
+  width: auto;
+  position: absolute;
+  right: -350px;
 `
 
 const HeaderVideo = () => {
+  const data = useStaticQuery(graphql`
+    query HeaderImage {
+      image: file(relativePath: { eq: "behind.jpg" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <VideoContainer>
       {/*<video autoPlay={true} muted={true} loop={true} width="100%" >
-    
-    <source src={Showreel} type="video/mp4" />
-    Sorry, your browser doesn't support embedded videos.
-  </video>*/}
-      <Image src={Showreel} />
+        <source src={Showreel} type="video/mp4" />
+        Sorry, your browser doesn't support embedded videos.
+      </video>*/}
 
+      <Img fluid={data.image.childImageSharp.fluid} className={HeaderVideoStyles.heroimage}/>
       <OverlayText>
         <TopText>George Simpson</TopText>
         <TagLine>Camera Operator | Steadicam </TagLine>

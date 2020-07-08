@@ -37,3 +37,10 @@
         height:40%;
     }
 }
+
+/* Controlling the image of George on larger screens */
+@media only screen and (min-width: 1600px) {
+    .portrait {
+        max-width: 70%;
+    }
+}
