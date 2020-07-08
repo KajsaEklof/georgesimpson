@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{sV86:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),c=n.n(a),o=n("JLE3"),r=n("Wbzz"),i=n("GnN6");t.default=function(){return c.a.createElement(o.a,null,c.a.createElement(i.a,{title:"Behind the Scenes"}),c.a.createElement(r.a,{to:"/"},"Back to home"))}}}]);
-//# sourceMappingURL=component---src-pages-behind-the-scenes-js-f40220175b6a03a49167.js.map
