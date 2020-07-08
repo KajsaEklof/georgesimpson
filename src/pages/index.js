@@ -24,7 +24,7 @@ library.add(fab, faArrowRight)
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query GeorgeImage {
-      image: file(relativePath: { eq: "GeorgeSimpson_headshot.jpg" }) {
+      image: file(relativePath: { eq: "GeorgeSimpson_large.jpg" }) {
         childImageSharp {
           fixed {
             ...GatsbyImageSharpFixed
