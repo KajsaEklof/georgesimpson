@@ -23,7 +23,7 @@ library.add(fab, faArrowRight)
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query GeorgeImage {
-      image: file(relativePath: { eq: "GS_Square.jpg" }) {
+      file(relativePath: { eq: "George1.jpg" }) {
         childImageSharp {
           fixed {
             ...GatsbyImageSharpFixed
@@ -82,7 +82,7 @@ const IndexPage = () => {
 
             <div className="col-lg">
               <Img
-                fluid={data.image.childImageSharp.fluid}
+                fluid={data.file.childImageSharp.fluid}
                 className={aboutStyles.portrait}
               />
             </div>
