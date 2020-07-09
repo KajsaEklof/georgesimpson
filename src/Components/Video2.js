@@ -28,9 +28,6 @@ class VideoOverlay extends Component {
       const theButton = event.target
       const theImage = theButton.nextElementSibling
       const theVideo = theImage.nextElementSibling
-      
-      const theVideoID = theVideo.id
-      const theImageID = theImage.id
 
       theButton.style.display = "none"
       theImage.style.display = "none"
