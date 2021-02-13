@@ -29,7 +29,7 @@
   padding: 0em 2em 2em 0em;
 }
 
-.socialLink {
+/* .socialLink {
   text-decoration: none;
   color: #303030;
   display: block;
@@ -49,7 +49,7 @@
   color: var(--olivegreen);
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-}
+} */
 
 .icon {
   color: #303030;

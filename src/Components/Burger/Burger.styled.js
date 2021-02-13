@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { device } from "../ComponentStyles/Device";
+import styled from "styled-components"
+import { device } from "../ComponentStyles/Device"
 
 export const StyledBurger = styled.button`
   position: relative;
@@ -29,7 +29,8 @@ export const StyledBurger = styled.button`
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ open }) =>
+        open ? "rotate(45deg) translate(-2px, -0px)" : "rotate(0)"};
     }
 
     :nth-child(2) {
@@ -38,7 +39,8 @@ export const StyledBurger = styled.button`
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ open }) =>
+        open ? "rotate(-45deg) translate(0px, -2px)" : "rotate(0)"};
     }
   }
 `

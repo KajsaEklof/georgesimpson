@@ -6,18 +6,21 @@
 
 module.exports = {
   pathPrefix: `/georgesimpson`,
+  siteMetadata: {
+    title: 'George Simpson - Camera Operator',
+    description: 'George Simpson is a camera operator based in Surrey.',
+    url: 'https://www.george-simpson.com', // No trailing slash allowed!
+    image: '/images/GeorgeSimpson_400.jpg', // Path to your image you placed in the 'static' folder
+  },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-remark-video-poster`,
+      resolve: `gatsby-plugin-sass`,
       options: {
-        // Size of the poster in pixels
-        // By default width is 1920px (HD video width)
-        // If your container is smaller, you should specify a smaller size
-        width: 350,
+        useResolveUrlLoader: true,
       },
     },
     {
@@ -47,9 +50,9 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         typekit: {
-         id: 'rhr1wiy',
+          id: 'rhr1wiy',
         },
       },
     },
   ],
-}
+};

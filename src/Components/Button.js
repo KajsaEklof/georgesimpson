@@ -5,24 +5,25 @@ import { device } from "./ComponentStyles/Device"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import LayoutStyles from "./layout.module.css"
 
-const PrimaryButton = props => {
-  const LinkButton = styled(GatsbyLink)`
+const Button = props => {
+  const Button = styled.button`
     background-color: var(--olivegreen);
     border-radius: 50px;
+    border: none;
+    /*box-shadow: 3px 3px 6px 1px #828282b5; */
     color: #ffffff;
     cursor: pointer;
-    font-size: 0.9em;
     font-family: "Futura PT", sans-serif;
+    font-size: 0.9em;
     font-weight: bold;
+    margin: 0.5em;
     padding: 0.5em 1.2em;
     text-align: center;
     text-decoration: none;
     width: 50%;
-    min-width: fit-content;
 
     &:hover {
       background-color: hsla(134, 16%, 38%, 0.83);
-      color: #ffffff;
       transition: 0.3s ease-in-out;
     }
     &:active {
@@ -40,11 +41,11 @@ const PrimaryButton = props => {
   }
 
   return (
-    <LinkButton to={props.link} role="button" className={LayoutStyles.sink}>
+    <Button type="button" className={LayoutStyles.sink}>
       {props.text}
       <FontAwesomeIcon icon="arrow-right" style={iconStyle} size="lg" />
-    </LinkButton>
+    </Button>
   )
 }
 
-export default PrimaryButton
+export default Button

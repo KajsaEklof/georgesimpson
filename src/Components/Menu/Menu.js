@@ -1,26 +1,30 @@
-import React from 'react';
-import { StyledMenu } from './Menu.styled';
-import { bool } from 'prop-types';
-import { Link } from 'gatsby';
+import React, { useEffect } from "react"
+import { StyledMenu } from "./Menu.styled"
+import { bool, func } from "prop-types"
+import { Link } from "gatsby"
 
-const Menu = ({ open }) => {
-   
+const Menu = ({ open, setOpen }) => {
+  useEffect(() => {
+    console.log("UseEffect", open)
+  })
+
   return (
     <StyledMenu open={open}>
-      <Link to="/">
+      <Link to="/" onClick={() => setOpen(!open)}>
         Home
       </Link>
-      <Link to="/work">
+      <Link to="/work" onClick={() => setOpen(!open)}>
         Work
-        </Link>
-      <Link to="/contact">
+      </Link>
+      <Link to="/contact" onClick={() => setOpen(!open)}>
         Contact
-        </Link>
+      </Link>
     </StyledMenu>
   )
 }
 Menu.propTypes = {
   open: bool.isRequired,
+  setOpen: func.isRequired,
 }
 
-export default Menu;
+export default Menu

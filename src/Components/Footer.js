@@ -1,50 +1,21 @@
-import React from "react";
-import footerStyles from "./footer.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "gatsby";
+import React from "react"
 
 const Footer = () => {
   const year = new Date().getFullYear()
 
   return (
-    <footer className={footerStyles.footer}>
-    <div className={footerStyles.wrapper}>
-      <div className={footerStyles.container}>
-        <Link
-          to="/contact/"
-          className={[footerStyles.links, footerStyles.underline].join(" ")}
+    <footer className="footer container">
+      <p>© George Simpson {year}</p>
+      <p className="creator">
+        Website by{" "}
+        <a
+          href="www.kajsaeklof.com"
+          className="link"
+          title="Kajsa Eklöf's website."
         >
-          Contact
-        </Link>
-        <div className={footerStyles.social}>
-          <a
-            href="https://www.instagram.com/steadi_g/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Follow me on Instagram"
-          >
-            <FontAwesomeIcon
-              icon={["fab", "instagram"]}
-              size="2x"
-              className={footerStyles.icon}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/george-simpson-82843541/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Connect on LinkedIn"
-          >
-            <FontAwesomeIcon
-              icon={["fab", "linkedin"]}
-              size="2x"
-              className={footerStyles.icon}
-            />
-          </a>
-        </div>
-      </div>
-      <p className={footerStyles.para}>© George Simpson {year}</p>
-      </div>
+          Kajsa Eklöf
+        </a>
+      </p>
     </footer>
   )
 }

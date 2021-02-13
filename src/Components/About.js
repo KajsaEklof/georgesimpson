@@ -1,11 +1,11 @@
-import React from "react"
-import Styled from "styled-components"
-import { device } from "./ComponentStyles/Device"
-import aboutStyles from "./about.module.css"
-import SecondaryButton from "./SecondaryButton"
-import Section from "./Section"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react';
+import Styled from 'styled-components';
+import { device } from './ComponentStyles/Device';
+import aboutStyles from './about.module.css';
+import PrimaryButton from './PrimaryButton';
+import Section from './Section';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const About = () => {
   const ContentContainer = Styled.div`
@@ -16,7 +16,7 @@ const About = () => {
       @media ${device.desktop} {
         flex-direction: row;
       }
-    `
+    `;
   const data = useStaticQuery(graphql`
     query AboutImage {
       image: file(relativePath: { eq: "GeorgeSimpson_square.jpg" }) {
@@ -30,9 +30,9 @@ const About = () => {
         }
       }
     }
-  `)
+  `);
 
-  console.log(data)
+  console.log(data);
 
   return (
     <Section title="About me">
@@ -69,14 +69,14 @@ const About = () => {
           <p>Hope to work with you soon!</p>
 
           <div className={aboutStyles.bgroup}>
-            <SecondaryButton text={"View Showreel"} link={"/work/"} />
-            <SecondaryButton text={"Contact"} link={"/contact/"} />
+            <PrimaryButton text={'View Showreel'} link={'/work/'} />
+            <PrimaryButton text={'Contact'} link={'/contact/'} />
           </div>
           <Img fixed={data.image.childImageSharp.fixed} />
         </div>
       </ContentContainer>
     </Section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
