@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // import "../Styles/index.css";
 import '../Styles/style.scss';
 import '../Styles/layout.css';
@@ -15,11 +15,6 @@ import { Link } from 'gatsby';
 const Layout = props => {
   const [open, setOpen] = useState(false);
   const homepage = props.homepage;
-
-  useEffect(() => {
-    console.log('This is open:', open);
-    console.log('Layout homepage', props.homepage);
-  });
 
   return (
     <div className="layout">

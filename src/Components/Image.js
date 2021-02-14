@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Image = props => {
   const data = useStaticQuery(graphql`
@@ -22,21 +22,19 @@ const Image = props => {
         }
       }
     }
-  `)
+  `);
 
   const image = data.allFile.edges.find(n => {
-    console.log("allFiles", data.allFile)
-    console.log("n", n)
-    return n.node.relativePath === props.fileName
-  })
+    return n.node.relativePath === props.fileName;
+  });
 
   if (!image) {
-    return null
+    return null;
   }
 
-  const imageFluid = image.node.childImageSharp.fluid
+  const imageFluid = image.node.childImageSharp.fluid;
   // const imageFixed = image.node.childImageSharp.fixed
 
-  return <Img alt={props.alt} fluid={imageFluid} className=()/>
-}
-export default Image
+  return <Img alt={props.alt} fluid={imageFluid} className={props.className} />;
+};
+export default Image;

@@ -6,7 +6,6 @@ import './navigation.scss';
 const Navigation = props => {
   const getLogo = homepage => {
     if (!homepage) {
-      console.log('Navigation hompage?', homepage);
       return (
         <Link to="/" className="logo">
           George Simpson

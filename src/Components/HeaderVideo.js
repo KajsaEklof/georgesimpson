@@ -1,13 +1,12 @@
 // https://codepen.io/icutpeople/pen/whueK Text over video
 
-import React from "react"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React from 'react';
+import Image from './Image';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { device } from "./ComponentStyles/Device"
-import HeaderVideoStyles from "./headerVideo.module.css"
+import { device } from './ComponentStyles/Device';
+import HeaderVideoStyles from './headerVideo.module.css';
 
 const VideoContainer = styled.div`
   position: relative;
@@ -16,7 +15,7 @@ const VideoContainer = styled.div`
     margin-top: 0;
     height: calc(100vh / 2);
   }
-`
+`;
 const OverlayText = styled.div`
   background: rgba(0, 0, 0, 0);
   position: absolute;
@@ -33,7 +32,7 @@ const OverlayText = styled.div`
   @media ${device.desktop} {
     height: calc(100vh / 2);
   }
-`
+`;
 
 const TopText = styled.h1`
   color: #ffffff;
@@ -45,13 +44,13 @@ const TopText = styled.h1`
   padding: 0;
   letter-spacing: -3px;
   font-style: italic;
-`
+`;
 const TagLine = styled.h3`
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.17em;
-`
+`;
 
 const Bgroup = styled.div`
   display: flex;
@@ -67,37 +66,14 @@ const Bgroup = styled.div`
     height: 0%;
     justify-content: ;
   }
-`
+`;
 
 const HeaderVideo = () => {
-  const data = useStaticQuery(graphql`
-    query HeaderImage {
-      image: file(relativePath: { eq: "GS_inhills_800.jpg" }) {
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
-          }
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
   return (
     <VideoContainer>
-      {/*<video autoPlay={true} muted={true} loop={true} width="100%" >
-        <source src={Showreel} type="video/mp4" />
-        Sorry, your browser doesn't support embedded videos.
-      </video>
-      
-      <PrimaryButton text={"View Showreel"} link={"/work/"} />
-      <PrimaryButton text={"Contact"} link={"/contact/"} />
-    
-    */}
-
-      <Img
-        fluid={data.image.childImageSharp.fluid}
+      <Image
+        fileName="GeorgeSimpson_aboutMe.jpg"
+        alt="George Simpson"
         className={HeaderVideoStyles.heroimage}
       />
       <OverlayText>
@@ -123,7 +99,7 @@ const HeaderVideo = () => {
         </Bgroup>
       </OverlayText>
     </VideoContainer>
-  )
-}
+  );
+};
 
-export default HeaderVideo
+export default HeaderVideo;
