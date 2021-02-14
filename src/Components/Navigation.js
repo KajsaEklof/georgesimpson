@@ -24,6 +24,11 @@ const Navigation = props => {
       {getLogo(props.homepage)}
       <ul className="nav justify-end">
         <li>
+          <Link to="/" className="navLink" activeClassName="active">
+            Home
+          </Link>
+        </li>
+        <li>
           <Link to="/work/" className="navLink" activeClassName="active">
             Work
           </Link>

@@ -55,16 +55,16 @@ const TagLine = styled.h3`
 const Bgroup = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 15%;
   padding-top: 2em;
   width: 100%;
   @media ${device.desktop} {
     flex-direction: row;
+    justify-content: space-evenly;
     max-width: 50%;
     height: 0%;
-    justify-content: ;
   }
 `;
 

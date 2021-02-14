@@ -1,0 +1,27 @@
+$brightOrange: #e54c14;
+$oliveGreen: #517058;
+$seaBlue: #367081;
+$sand: #f4eee1;
+
+
+.not-found-page {
+    background-color: $oliveGreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    h3 {
+        color: $sand;
+    }
+
+    a:visited {
+        color: #000;
+    }
+
+    a {
+        padding-top: 2em;
+        font-size: 1.5em;
+    }
+}
