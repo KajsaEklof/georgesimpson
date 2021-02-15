@@ -228,14 +228,14 @@ a.link:hover:after {
   border-radius: 50px;
   color: #ffffff;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 1em;
   font-family: "Futura PT", sans-serif;
   font-weight: bold;
-  padding: 0.5em 1.2em;
+  padding: 0.5em 2em;
   text-align: center;
   text-decoration: none;
   width: 13em;
-  min-width: fit-content;  
+  min-width: fit-content;
 }
 
 .button:hover {
@@ -402,8 +402,9 @@ p.video-title {
 }
 
 .image-contact {
-  /* width: 80%;
-  height: 100%; */
+  /* width: 80%; */
+  height: 100%;
+  min-height: 350px;
   margin-top: 2em;
 }
 
@@ -420,6 +421,16 @@ section.section {
   margin: 0 auto;
   width: 80%;
   padding: 2em 0em;
+}
+
+.header-video {
+  width: 100vw;
+  height: 90vh;
+  object-fit: cover;
+}
+
+.header-video-container.button {
+  margin-bottom: 1em;
 }
 
 .recent-work {
@@ -441,7 +452,7 @@ section.section {
     color: #fff;
   }
 
-  button.button {
+  .button {
     background-color: #303030;
     color: $sand;
     align-self: center;
@@ -485,6 +496,14 @@ section.section {
     }
   }
 
+  .header-video {
+    height: 70vh;
+  }
+
+  .header-video-container.button {
+      margin-bottom: 0em;
+  }
+
   .col-video {
     width: 32%;
   }
@@ -495,6 +514,7 @@ section.section {
 
   .image-contact {
     margin-top: 0;
+    min-height: 100%;
   }
 
   .showreel {
@@ -518,14 +538,4 @@ section.section {
   /* .row.about {
     width: 100%;
   } */
-
-}
-
-
-/* Mobile Styles*/
-@media only screen and (min-width: 1000px) {
-  .button {
-    font-size: 1em;
-    padding: 0.5em 2em;
-  }
 }

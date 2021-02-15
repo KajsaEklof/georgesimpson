@@ -5,7 +5,7 @@ import { faArrowRight, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { config } from '@fortawesome/fontawesome-svg-core';
-
+import { Link } from 'gatsby';
 import Layout from '../Components/Layout';
 import SEO from '../Components/Seo';
 import HeaderVideo from '../Components/HeaderVideo';
@@ -154,14 +154,14 @@ const IndexPage = () => {
           <section className="recent-work section">
             <div className="row flex-space-between">
               <h2 className="section-heading">Recent work</h2>
-              <button className="button sink" title="View all work">
+              <Link className="button sink" title="View all work" to="/work">
                 View all work
                 <FontAwesomeIcon
                   icon="arrow-right"
                   size="lg"
                   className="button-icon"
                 />
-              </button>
+              </Link>
             </div>
             <div className="row work">
               <div className="col col-video">

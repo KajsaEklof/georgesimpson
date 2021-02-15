@@ -52,7 +52,7 @@ const Navigation = props => {
         </li>
         <li>
           <a
-            href="https://www.instagram.com/steadi_g/"
+            href="https://www.instagram.com/george___simpson/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Follow on Instagram"

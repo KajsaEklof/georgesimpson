@@ -40,7 +40,7 @@ const ContactPage = () => {
               </p>
               <div className="social-wrapper">
                 <a
-                  href="https://www.instagram.com/steadi_g/"
+                  href="https://www.instagram.com/george___simpson/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Follow on Instagram"
@@ -67,21 +67,26 @@ const ContactPage = () => {
                     className={contactStyles.icon}
                   />
                 </a>
-                <button className="button sink" title="Download CV">
+                <a
+                  className="button sink"
+                  title="Download CV"
+                  download="George"
+                  href="../files/George_Simpson_CV_2020.jpg"
+                >
                   Download CV
                   <FontAwesomeIcon
                     icon="arrow-right"
                     size="lg"
                     className="button-icon"
                   />
-                </button>
+                </a>
               </div>
             </div>
           </div>
           <div className="col base-0">
             <div className="image-contact">
               <Image
-                fileName="GeorgeSimpson_contact.jpg"
+                fileName="Contact.jpg"
                 alt="George Simpson standing on the quay filming a boat on the water."
               />
             </div>

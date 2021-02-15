@@ -1,19 +1,19 @@
 // https://codepen.io/icutpeople/pen/whueK Text over video
 
 import React from 'react';
-import Image from './Image';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { device } from './ComponentStyles/Device';
-import HeaderVideoStyles from './headerVideo.module.css';
+import ShowreelVideo from '../files/Website Cover Video.mp4';
 
 const VideoContainer = styled.div`
   position: relative;
   height: 100vh;
   @media ${device.desktop} {
     margin-top: 0;
-    height: calc(100vh / 2);
+    height: 70vh;
   }
 `;
 const OverlayText = styled.div`
@@ -30,7 +30,7 @@ const OverlayText = styled.div`
   height: calc(100vh - 6em);
 
   @media ${device.desktop} {
-    height: calc(100vh / 2);
+    height: 60vh;
   }
 `;
 
@@ -68,34 +68,46 @@ const Bgroup = styled.div`
   }
 `;
 
+// <Image
+//   fileName="GeorgeSimpson_aboutMe.jpg"
+//   alt="George Simpson"
+//   className={HeaderVideoStyles.heroimage}
+// />;
+
 const HeaderVideo = () => {
   return (
     <VideoContainer>
-      <Image
-        fileName="GeorgeSimpson_aboutMe.jpg"
-        alt="George Simpson"
-        className={HeaderVideoStyles.heroimage}
-      />
+      <video className="header-video" loop muted autoPlay>
+        <source src={ShowreelVideo} type="video/mp4" />
+      </video>
       <OverlayText>
         <TopText>George Simpson</TopText>
         <TagLine>Camera Operator | Steadicam </TagLine>
         <Bgroup>
-          <button className="button sink" title="Download CV">
+          <Link
+            className="header-video-container button sink"
+            title="View showreel"
+            to="/work"
+          >
             View Showreel
             <FontAwesomeIcon
               icon="arrow-right"
               size="lg"
               className="button-icon"
             />
-          </button>
-          <button className="button sink" title="Download CV">
+          </Link>
+          <Link
+            className="header-video-container button sink"
+            title="Contact"
+            to="/contact"
+          >
             Contact
             <FontAwesomeIcon
               icon="arrow-right"
               size="lg"
               className="button-icon"
             />
-          </button>
+          </Link>
         </Bgroup>
       </OverlayText>
     </VideoContainer>
