@@ -15,6 +15,11 @@ import Image from '../Components/Image';
 // Prevent fontawesome from dynamically adding its css since we did it manually above
 config.autoAddCss = false;
 library.add(fab, faArrowRight, faPlayCircle);
+// <div className="row">
+//   <div className="col">
+//     <h3>Hello!</h3>
+//   </div>
+// </div>
 
 const IndexPage = () => {
   return (
@@ -24,13 +29,9 @@ const IndexPage = () => {
         <HeaderVideo />
         <section className="section">
           <h2 className="section-heading">About me</h2>
-          <div className="row">
-            <div className="col">
-              <h3>Hello!</h3>
-            </div>
-          </div>
           <div className="row about">
             <div className="col about-me base-0">
+              <h3>Hello!</h3>
               <p>
                 Thank you for visiting my website and checking out some of my
                 work. I am an enthusiastic and passionate camera operator and
@@ -64,8 +65,8 @@ const IndexPage = () => {
             <div className="col center col-image-about-me base-0">
               <div className="image-about-me">
                 <Image
-                  fileName="GeorgeSimpson_aboutMe.jpg"
-                  alt="George Simpson"
+                  fileName="About_Me.jpg"
+                  alt="A photo of George Simpson smiling and sitting down with his Panasonic AU-EVA1 5.7K Camera in front of an open ocean."
                 />
               </div>
             </div>

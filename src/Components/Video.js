@@ -2,7 +2,15 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '../Components/Image';
 
-const Video = ({ videoSrcURL, videoTitle, width, height, ...props }) => {
+const Video = ({
+  videoSrcURL,
+  videoTitle,
+  width,
+  height,
+  overlay,
+  overlayAlt,
+  ...props
+}) => {
   // const Videocontainer = styled.div`
   //   width: 100%;
   //   height: 100%;
@@ -22,8 +30,8 @@ const Video = ({ videoSrcURL, videoTitle, width, height, ...props }) => {
         <div className="video-container__overlay">
           <Image
             style={{ position: 'absolute' }}
-            fileName="GeorgeSimpson_aboutMe.jpg"
-            alt="George Simpson"
+            fileName={overlay}
+            alt={overlayAlt}
             className="video-container__overlay-image"
           />
           <button title="Play video" className="play-button">

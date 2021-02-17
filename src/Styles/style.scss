@@ -336,9 +336,9 @@ a.link:hover:after {
 .video-container {
   width: 100%;
 
-  iframe {
-    visibility: hidden;
-  }
+  // iframe {
+  //   visibility: hidden;
+  // }
 
   &__overlay {
     display: flex;
@@ -396,9 +396,13 @@ p.video-title {
 }
 
 .image-about-me {
-  width: 80%;
+  width: 100%;
   height: 100%;
   margin-top: 1em;
+}
+
+.about-me {
+  width: clamp(60%, 80%, 80%);
 }
 
 .image-contact {
@@ -533,6 +537,7 @@ section.section {
 
   .about-me {
     max-width: 80%;
+    padding-right: 2em;
   }
 
   /* .row.about {
