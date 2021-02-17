@@ -4,6 +4,7 @@ import contactStyles from './contact.module.css';
 import Layout from '../Components/Layout';
 import SEO from '../Components/Seo';
 import Image from '../Components/Image';
+import CV from '../../public/static/files/George_Simpson_CV_2020.pdf';
 
 const ContactPage = () => {
   return (
@@ -70,8 +71,8 @@ const ContactPage = () => {
                 <a
                   className="button sink"
                   title="Download CV"
-                  download="George"
-                  href="../files/George_Simpson_CV_2020.jpg"
+                  download="GeorgeSimpsonCV"
+                  href={CV}
                 >
                   Download CV
                   <FontAwesomeIcon
