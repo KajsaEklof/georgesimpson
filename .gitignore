@@ -1,6 +1,5 @@
 .prettierrc
 .prettierignore
-/src/files
 
 # Logs
 logs

@@ -4,7 +4,7 @@ import contactStyles from './contact.module.css';
 import Layout from '../Components/Layout';
 import SEO from '../Components/Seo';
 import Image from '../Components/Image';
-import CV from '../../public/static/files/George_Simpson_CV_2020.pdf';
+import CV from '../files/George_Simpson_CV_2020.pdf';
 
 const ContactPage = () => {
   return (
