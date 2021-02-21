@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
-// import "../Styles/index.css";
-import '../Styles/style.scss';
-import '../Styles/layout.css';
 import Footer from './Footer';
-import 'typeface-source-sans-pro';
-import 'typeface-bebas-neue';
-import 'typeface-poppins';
-import 'focus-visible';
 import Menu from './Menu';
 import Burger from './Burger';
 import Navigation from './Navigation';
 import { Link } from 'gatsby';
+import 'typeface-source-sans-pro';
+import 'typeface-bebas-neue';
+import 'typeface-poppins';
+import 'focus-visible';
 
 const Layout = props => {
   const [open, setOpen] = useState(false);

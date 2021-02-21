@@ -4,9 +4,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { device } from './ComponentStyles/Device';
-import ShowreelVideo from '../files/Website Cover Video 2_small.mp4';
+import ShowreelVideo from '../files/Website Cover Video.mp4';
 
 const VideoContainer = styled.div`
   position: relative;

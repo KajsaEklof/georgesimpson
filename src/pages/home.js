@@ -167,20 +167,23 @@ const IndexPage = () => {
             <div className="row work">
               <div className="col col-video">
                 <Videocontainer
-                  videoTitle="All to play for - Barclays"
-                  videoSrcURL="https://www.youtube.com/embed/gS48Xy5oKWU?"
+                  videoTitle="Remarkable Places to Eat : Christmas | BBC TWO"
+                  videoSrcURL="https://www.youtube.com/embed/oxmx_HZby_U"
+                  overlay="Remarkable_Places_to_Eat.png"
                 />
               </div>
               <div className="col col-video">
                 <Videocontainer
                   videoTitle="Nadiya Bakes - BBC"
                   videoSrcURL="https://www.youtube.com/embed/xHr9Iunc7pw"
+                  overlay="Nadiya_bakes.png"
                 />
               </div>
               <div className="col col-video">
                 <Videocontainer
-                  videoTitle="Jack Whitehall and Michael Dapaah — Lost in the Countryside "
-                  videoSrcURL="https://www.youtube.com/embed/rfJDqegn31I"
+                  videoTitle="Nadiya Bakes - BBC"
+                  videoSrcURL="https://www.youtube.com/embed/xHr9Iunc7pw"
+                  overlay="Nadiya_bakes.png"
                 />
               </div>
             </div>

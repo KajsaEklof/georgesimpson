@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import '../Styles/404.scss';
 
 const PageNotFound = () => {
   return (

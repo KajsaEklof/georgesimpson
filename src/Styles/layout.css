@@ -64,10 +64,12 @@
     font-style: italic;
     font-size: 2em;
     letter-spacing: -2px;
-    color: #000000;    font-weight: 600;
+    color: #000000;
+    font-weight: 600;
     text-decoration: none;
     padding: 0em 0em 0em 1em;
   }
+
   .logo:hover {
     color: var(--olivegreen);
     transition: color 0.4s ease;
