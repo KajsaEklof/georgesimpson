@@ -9,8 +9,7 @@ module.exports = {
   siteMetadata: {
     title: 'George Simpson - Camera Operator',
     description: 'George Simpson is a camera operator based in Surrey.',
-    url: 'https://www.george-simpson.com', // No trailing slash allowed!
-    image: '/images/GeorgeSimpson_400.jpg', // Path to your image you placed in the 'static' folder
+    url: 'https://www.george-simpson.com',
   },
   plugins: [
     `gatsby-plugin-styled-components`,

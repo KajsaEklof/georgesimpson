@@ -1,5 +1,6 @@
 .prettierrc
 .prettierignore
+./src/node-version
 
 # Logs
 logs
