@@ -1,0 +1,75 @@
+$brightOrange: #e54c14;
+$oliveGreen: #517058;
+$seaBlue: #367081;
+$sand: #f4eee1;
+
+@import '../breakpoints.scss';
+
+.coverpage {
+  &-main{
+    background-color: $oliveGreen;
+    color: $sand;
+    font-family: 'Futura PT', 'Source Sans Pro', sans-serif;
+    // max-height: 100vh;
+    // min-height: 100vh;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 3rem;
+
+    ::selection {
+      background-color: $sand;
+      color: $oliveGreen;
+    }
+
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // padding: 3rem;
+
+    h1 {
+      letter-spacing: -2px;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+
+    h3 {
+      font-size: clamp(1.2rem, 5vw, 2rem);
+    }
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    a:not(.coverpage-socials-icon) {
+      border-bottom: 3px $sand solid;
+      color: $sand;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 1rem;
+    
+      &:hover {
+        background-color: $sand;
+        color: $oliveGreen;
+      }
+    }
+    
+    .coverpage-socials {
+      &-icon {
+        margin: 0.5rem;
+        color: $sand;
+      }
+    }
+  }
+}

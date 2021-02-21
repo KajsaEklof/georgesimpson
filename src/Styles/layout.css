@@ -1,0 +1,88 @@
+:root {
+    --brightorange: #e54c14;
+    --olivegreen: #517058;
+    --seablue: #367081;
+    --sand: #f4eee1;
+  }
+  
+  .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex-grow: 1;
+    /* margin: 0 auto;
+    max-width: 100%;  */
+    margin: auto;
+    padding: 0em 3em 3em 3em;
+    width: 80%;
+  }
+
+  .content.homepage {
+    width: 100%;
+    padding: 0;
+  } 
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: futura-pt-bold, sans-serif;
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /* a {
+    color: var(--olivegreen);
+  } */
+  /* Sink */
+  .sink {
+    display: inline-block;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    -webkit-tap-highlight-color: transparent;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px transparent;
+  }
+  .sink:hover {
+    transform: translateY(5px);
+  }
+  
+  .mobilenavbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+  }
+  
+  .logo {
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2em;
+    letter-spacing: -2px;
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0em 0em 0em 1em;
+  }
+
+  .logo:hover {
+    color: var(--olivegreen);
+    transition: color 0.4s ease;
+    -webkit-transition: color 0.4s ease;
+  }
+  
+  /* DESKTOP */
+  @media only screen and (min-width: 1000px) {
+    /* .content {
+      padding: 0em 3em 2em 3em;
+    }
+   */
+    .mobilenavbar {
+      display: none;
+    }
+  }
