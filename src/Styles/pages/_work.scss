@@ -1,0 +1,25 @@
+.work {
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include desktop {
+    margin-bottom: 2em;
+  }
+}
+
+.showreel {
+  width: 100%;
+  
+  @include desktop {
+    width: 49%;
+  }
+
+  &:first-child {
+    padding-right: 2%;
+  }
+}
+
+.showreel,
+.col-video {
+  margin-bottom: 2em;
+}

@@ -1,4 +1,4 @@
-.link {
+/* .link {
   text-decoration: none;
   color: var(--olivegreen);
   display: inline-block;
@@ -27,7 +27,7 @@
   justify-content: space-around;
   display: inline-block;
   padding: 0em 2em 2em 0em;
-}
+} */
 
 /* .socialLink {
   text-decoration: none;
@@ -51,7 +51,7 @@
   transition-timing-function: ease-in-out;
 } */
 
-.icon {
+/* .icon {
   color: #303030;
 }
 
@@ -82,7 +82,7 @@
   color: var(--sand);
 }
 
-/* Sink */
+
 .sink {
   display: inline-block;
   transition-duration: 0.3s;
@@ -107,4 +107,4 @@
     img {
      display: block;
     }
-  }
+  } */

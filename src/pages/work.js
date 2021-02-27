@@ -9,7 +9,7 @@ const WorkPage = () => {
   return (
     <React.Fragment>
       <SEO title="Work" />
-      <Layout className="fit-window" homepage={false}>
+      <Layout homepage={false}>
         <div className="row">
           <h1 className="page-title">Work</h1>
         </div>

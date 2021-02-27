@@ -1,0 +1,42 @@
+.button {
+  background-color: $oliveGreen;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: 'Futura PT', sans-serif;
+  font-weight: bold;
+  padding: 0.5em 2em;
+  text-align: center;
+  text-decoration: none;
+  width: 13em;
+  min-width: fit-content;
+
+  &:hover {
+    background-color: hsla(134, 16%, 38%, 0.83);
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &-icon {
+    padding-left: 0.3em;
+  }
+}
+
+.sink {
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+
+  &:hover {
+    transform: translateY(5px);
+  }
+}

@@ -10,13 +10,13 @@ const ContactPage = () => {
   return (
     <React.Fragment>
       <SEO title="Contact" />
-      <Layout className="fit-window" homepage={false}>
+      <Layout homepage={false}>
         <div className="row">
           <div className="col base-0">
             <h1 className="page-title">Contact / CV</h1>
           </div>
         </div>
-        <div className="row">
+        <div className="row contact-page">
           <div className="col base-0 align-center">
             <div className="contact-wrapper">
               <p className="top-margin">

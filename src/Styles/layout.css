@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --brightorange: #e54c14;
     --olivegreen: #517058;
     --seablue: #367081;
@@ -13,8 +13,6 @@
   
   .content {
     flex-grow: 1;
-    /* margin: 0 auto;
-    max-width: 100%;  */
     margin: auto;
     padding: 0em 3em 3em 3em;
     width: 80%;
@@ -35,10 +33,6 @@
     font-style: normal;
   }
   
-  /* a {
-    color: var(--olivegreen);
-  } */
-  /* Sink */
   .sink {
     display: inline-block;
     transition-duration: 0.3s;
@@ -76,13 +70,9 @@
     -webkit-transition: color 0.4s ease;
   }
   
-  /* DESKTOP */
   @media only screen and (min-width: 1000px) {
-    /* .content {
-      padding: 0em 3em 2em 3em;
-    }
-   */
+
     .mobilenavbar {
       display: none;
     }
-  }
+  } */

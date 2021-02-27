@@ -8,7 +8,12 @@ const SEO = ({ title, description, image }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
 
-  const { defaultTitle, defaultDescription, siteUrl } = site.siteMetadata;
+  const {
+    defaultTitle,
+    titleTemplate,
+    defaultDescription,
+    siteUrl,
+  } = site.siteMetadata;
 
   const seo = {
     title: title || defaultTitle,
@@ -17,9 +22,9 @@ const SEO = ({ title, description, image }) => {
   };
 
   return (
-    <Helmet title={seo.title}>
+    <Helmet title={seo.title} titleTemplate={titleTemplate}>
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
+      <title>{seo.title}</title>
       {seo.url && <meta property="og:url" content={seo.url} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
@@ -48,6 +53,7 @@ const query = graphql`
     site {
       siteMetadata {
         defaultTitle: title
+        titleTemplate
         defaultDescription: description
         siteUrl: url
       }

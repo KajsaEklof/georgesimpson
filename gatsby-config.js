@@ -8,6 +8,7 @@ module.exports = {
   pathPrefix: `/georgesimpson`,
   siteMetadata: {
     title: 'George Simpson - Camera Operator',
+    titleTemplate: '%s | George Simpson - Camera Operator',
     description: 'George Simpson is a camera operator based in Surrey.',
     url: 'https://www.george-simpson.com',
   },
