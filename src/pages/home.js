@@ -15,13 +15,15 @@ import Image from '../Components/Image';
 // Prevent fontawesome from dynamically adding its css since we did it manually above
 config.autoAddCss = false;
 library.add(fab, faArrowRight, faPlayCircle);
-// <div className="row">
-//   <div className="col">
-//     <h3>Hello!</h3>
-//   </div>
-// </div>
 
 const IndexPage = () => {
+  window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty(
+      '--scroll-y',
+      `${window.scrollY}px`
+    );
+  });
+
   return (
     <React.Fragment>
       <SEO title="Home" />
@@ -170,6 +172,7 @@ const IndexPage = () => {
                   videoTitle="Remarkable Places to Eat : Christmas | BBC TWO"
                   videoSrcURL="https://www.youtube.com/embed/oxmx_HZby_U"
                   overlay="Remarkable_Places_to_Eat.png"
+                  videoID="oxmx_HZby_U"
                 />
               </div>
               <div className="col col-video">
@@ -177,6 +180,7 @@ const IndexPage = () => {
                   videoTitle="Nadiya Bakes - BBC"
                   videoSrcURL="https://www.youtube.com/embed/xHr9Iunc7pw"
                   overlay="Nadiya_bakes.png"
+                  videoID="xHr9Iunc7pw"
                 />
               </div>
               <div className="col col-video">
@@ -184,6 +188,7 @@ const IndexPage = () => {
                   videoTitle="Nadiya Bakes - BBC"
                   videoSrcURL="https://www.youtube.com/embed/xHr9Iunc7pw"
                   overlay="Nadiya_bakes.png"
+                  videoID="xHr9Iunc7pw"
                 />
               </div>
             </div>
