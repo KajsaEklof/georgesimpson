@@ -17,13 +17,6 @@ config.autoAddCss = false;
 library.add(fab, faArrowRight, faPlayCircle);
 
 const IndexPage = () => {
-  window.addEventListener('scroll', () => {
-    document.documentElement.style.setProperty(
-      '--scroll-y',
-      `${window.scrollY}px`
-    );
-  });
-
   return (
     <React.Fragment>
       <SEO title="Home" />
